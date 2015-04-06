@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass.css"],"names":[],"mappings":"AAAA,EACE,eACA,CAAA,oBAAA,CAAA,mBAAA,CAAA,YAAA,CAAA","file":"sass.css","sourcesContent":["a {\n  font-size: 10px;\n  display: flex; }\n"],"sourceRoot":"/source/"}

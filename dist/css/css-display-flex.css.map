@@ -1,0 +1,1 @@
+{"version":3,"sources":["css-display-flex.css"],"names":[],"mappings":"AAAA,MACI,qBAAA,oBAAA","file":"css-display-flex.css","sourcesContent":[".demo {\n    display:flex;\n}"],"sourceRoot":"/source/"}
