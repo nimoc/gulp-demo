@@ -111,7 +111,7 @@ gulp.task('minifycss', function () {
 
 gulp.task('watchless', function () {
     gulp.watch('src/less/**/*.less', function (event) {
-        var paths = watchPath(event, 'src/', 'dist/')
+        var paths = watchPath(event, 'src/less/', 'dist/css/')
 
         log(colors.info(event.type) + ':' + paths.srcPath)
         log('dist:' + paths.distPath)
@@ -145,6 +145,27 @@ gulp.task('lesscss', function () {
     combined.on('error', handleError)
 })
 
+
+gulp.task('watchsass',function () {
+    gulp.watch('src/sass/**/*', function (event) {
+        var paths = watchPath(event, 'src/sass/', 'dist/css/')
+
+        log(colors.info(event.type) + ':' + paths.srcPath)
+        log('dist:' + paths.distPath)
+        sass(paths.srcPath)
+            .on('error', function (err) {
+                console.error('Error!', err.message);
+            })
+            .pipe(sourcemaps.init())
+            .pipe(minifycss())
+            .pipe(autoprefixer({
+              browsers: 'last 2 versions'
+            }))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest(paths.distDir))
+    })
+})
+
 gulp.task('sasscss', function () {
         sass('src/sass/')
         .on('error', function (err) {
@@ -158,11 +179,6 @@ gulp.task('sasscss', function () {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('dist/css'))
 })
-
-gulp.task('watchsass',function () {
-    gulp.watch('src/sass/**/*.scss', ['sasscss']);
-})
-
 
 gulp.task('watchimage', function () {
     gulp.watch('src/images/**/*', function (event) {

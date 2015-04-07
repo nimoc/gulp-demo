@@ -1,6 +1,6 @@
 {
   "name": "gulp-demo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Using gulp build a project instance. Link: https://github.com/nimojs/gulp-book/blob/master/chapter7.md",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -13,7 +13,7 @@
     "gulp-ruby-sass": "^1.0.1",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-uglify": "^1.1.0",
-    "gulp-watch-path": "0.0.1",
+    "gulp-watch-path": "^0.0.3",
     "stream-combiner2": "^1.0.2"
   },
   "scripts": {
