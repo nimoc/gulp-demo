@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>templates</title>
+</head>
+<body>
+file: <a href="../dist/templates/page.index.js">../dist/templates/page.index.js</a>
+<hr>
+<div id="view1"></div>
+<div id="view2"></div>
+<script src="../dist/js/handlebars.runtime.min.js"></script>
+<script src="../dist/templates/page.index.js"></script>
+<script>
+document.getElementById('view1').innerHTML = S.templates.page.index({name: "nimo"})
+document.getElementById('view2').innerHTML = S.templates.page.index({name: "gulp-book"})
+</script>
+</body>
+</html>
