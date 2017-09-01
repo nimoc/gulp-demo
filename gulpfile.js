@@ -150,7 +150,7 @@ gulp.task('watchsass',function () {
 })
 
 gulp.task('sasscss', function () {
-        sass('src/sass/')
+        sass('src/sass/*')
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
